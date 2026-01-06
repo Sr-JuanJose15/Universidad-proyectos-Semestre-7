@@ -1,0 +1,58 @@
+﻿@model Colegio_v3.Models.Curso
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Curso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectorGrupo.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectorGrupo.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grupo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grupo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AñoEscolar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AñoEscolar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapacidadMaxima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapacidadMaxima)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CursoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

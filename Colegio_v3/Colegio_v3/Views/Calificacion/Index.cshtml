@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Colegio_v3.Models.Calificacion>
+
+@{
+    ViewBag.Title = "Calificaciones";
+
+    var calificacionesAgrupadas = Model
+        .OrderBy(c => c.Estudiante.Curso.Grado)
+        .ThenBy(c => c.Asignatura.Nombre)
+        .GroupBy(c => c.Estudiante.Curso.Grado);
+}
+
+<h2 class="text-center mb-4">Listado de Calificaciones</h2>
+
+<p>
+    @Html.ActionLink("Registrar Nueva Calificación", "Create", null, new { @class = "btn btn-success mb-3" })
+</p>
+
+@foreach (var grupoCurso in calificacionesAgrupadas)
+{
+    <div class="card shadow p-4 mb-4 bg-light rounded">
+        <h4 class="mb-3">Curso: @grupoCurso.Key</h4>
+
+        @{
+            var materiasAgrupadas = grupoCurso
+                .GroupBy(c => c.Asignatura.Nombre)
+                .OrderBy(g => g.Key);
+        }
+
+        @foreach (var grupoMateria in materiasAgrupadas)
+        {
+            <div class="mb-4">
+                <h5 class="text-primary">Asignatura: @grupoMateria.Key</h5>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr class="table-secondary text-center">
+                                <th>Estudiante</th>
+                                <th>Nota</th>
+                                <th>Periodo</th>
+                                <th>Fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in grupoMateria)
+                            {
+                                <tr>
+                                    <td>@item.Estudiante.Nombres @item.Estudiante.Apellidos</td>
+                                    <td>@item.Nota</td>
+                                    <td>@item.Periodo</td>
+                                    <td>@item.Fecha.ToShortDateString()</td>
+                                    <td class="text-center">
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.CalificacionId }, new { @class = "btn btn-sm btn-primary" })<br />
+                                        @Html.ActionLink("Detalles", "Details", new { id = item.CalificacionId }, new { @class = "btn btn-sm btn-info mt-1" })<br />
+                                        @Html.ActionLink("Eliminar", "Delete", new { id = item.CalificacionId }, new
+                                        {
+                                            @class = "btn btn-sm btn-danger mt-1",
+                                            onclick = "return confirm('¿Estás seguro de que deseas eliminar este registro?');"
+                                        })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    </div>
+}

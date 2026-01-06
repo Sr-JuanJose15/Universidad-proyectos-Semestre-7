@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Colegio_v3.Models.AsignaturaPersonal>
+
+@{
+    ViewBag.Title = "Asignación de Materias";
+}
+
+<h2 class="text-center mb-4">Asignación de Materias a Docentes</h2>
+
+<p>
+    @Html.ActionLink("Nueva Asignación", "Create", null, new { @class = "btn btn-success mb-3" })
+</p>
+
+<div class="card shadow p-4 bg-white rounded">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr class="table-primary text-center">
+                    <th>@Html.DisplayNameFor(model => model.Asignatura.Nombre)</th>
+                    <th>@Html.DisplayNameFor(model => model.Personal.Nombres)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Asignatura.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Personal.Nombres)</td>
+                        <td class="text-center">
+                            @Html.ActionLink("Editar", "Edit", new { id = item.AsignaturaPersonalId }, new { @class = "btn btn-sm btn-primary" })<br />
+                            @Html.ActionLink("Detalles", "Details", new { id = item.AsignaturaPersonalId }, new { @class = "btn btn-sm btn-info mt-1" })<br />
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.AsignaturaPersonalId }, new { @class = "btn btn-sm btn-danger mt-1" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

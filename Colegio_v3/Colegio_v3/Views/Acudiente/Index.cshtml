@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Colegio_v3.Models.Acudiente>
+
+@{
+    ViewBag.Title = "Acudientes";
+}
+
+<h2 class="text-center mb-4">Registro de Acudientes</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Acudiente", "Create", null, new { @class = "btn btn-success mb-3" })
+</p>
+
+<div class="card shadow p-4 bg-white rounded">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr class="table-primary">
+                    <th>@Html.DisplayNameFor(model => model.Nombres)</th>
+                    <th>@Html.DisplayNameFor(model => model.Apellidos)</th>
+                    <th>@Html.DisplayNameFor(model => model.Parentesco)</th>
+                    <th>Teléfono Principal</th>
+                    <th>Teléfono Secundario</th>
+                    <th>@Html.DisplayNameFor(model => model.Correo)</th>
+                    <th>@Html.DisplayNameFor(model => model.Direccion)</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nombres)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Parentesco)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TelefonoPrincipal)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TelefonoSecundario)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Correo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Direccion)</td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                @Html.ActionLink("Editar", "Edit", new { id = item.AcudienteId }, new { @class = "btn btn-sm btn-primary mb-1" })
+                                @Html.ActionLink("Detalles", "Details", new { id = item.AcudienteId }, new { @class = "btn btn-sm btn-info mb-1" })
+                                @Html.ActionLink("Eliminar", "Delete", new { id = item.AcudienteId }, new
+                                {
+                                    @class = "btn btn-sm btn-danger mt-1",
+                                    onclick = "return confirm('¿Estás seguro de que deseas eliminar este registro?');"
+                                })
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .table th, .table td {
+        vertical-align: middle;
+    }
+</style>

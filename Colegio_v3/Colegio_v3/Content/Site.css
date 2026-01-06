@@ -1,0 +1,43 @@
+﻿body {
+    background-color: #f2f6fa; /* Fondo general claro */
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Profundidad */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+}
+
+.card-container {
+    background-color: white;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.table th, .table td {
+    vertical-align: middle !important;
+}
+
+.btn-custom {
+    margin-right: 10px;
+}
+
+table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #343a40;
+    color: #fff;
+}

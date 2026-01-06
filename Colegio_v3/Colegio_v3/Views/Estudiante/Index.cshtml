@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Colegio_v3.Models.Estudiante>
+
+@{
+    ViewBag.Title = "Estudiantes";
+    var estudiantesFiltrados = Model;
+    var estudiantesAgrupados = estudiantesFiltrados
+        .OrderBy(e => e.Curso.Grado)
+        .ThenBy(e => e.Apellidos)
+        .GroupBy(e => e.Curso.Grado);
+}
+
+<h2 class="text-center mb-4">Listado de Estudiantes</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo Estudiante", "Create", null, new { @class = "btn btn-success mb-3" })
+</p>
+
+@using (Html.BeginForm("Index", "Estudiantes", FormMethod.Get))
+{
+    <div class="form-group row mb-4">
+        <label for="searchString" class="col-sm-2 col-form-label">Buscar estudiante:</label>
+        <div class="col-sm-8">
+            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Nombre o apellido..." })
+        </div>
+        <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </div>
+}
+
+@foreach (var grupo in estudiantesAgrupados)
+{
+    <div class="card shadow mb-4 bg-white rounded">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Curso: @grupo.Key</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr class="table-primary text-center">
+                            <th>@Html.DisplayNameFor(model => model.First().Nombres)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Apellidos)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().TipoDocumento)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Documento)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().FechaNacimiento)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Genero)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Direccion)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Telefono)</th>
+                            <th>@Html.DisplayNameFor(model => model.First().Correo)</th>
+                            <th>Grado</th>
+                            <th>Nombre del Acudiente</th>
+                            <th>Apellido del Acudiente</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in grupo)
+                        {
+                            <tr>
+                                <td>@item.Nombres</td>
+                                <td>@item.Apellidos</td>
+                                <td>@item.TipoDocumento</td>
+                                <td>@item.Documento</td>
+                                <td>@item.FechaNacimiento.ToShortDateString()</td>
+                                <td>@item.Genero</td>
+                                <td>@item.Direccion</td>
+                                <td>@item.Telefono</td>
+                                <td>@item.Correo</td>
+                                <td>@item.Curso.Grado</td>
+                                <td>@item.Acudiente.Nombres</td>
+                                <td>@item.Acudiente.Apellidos</td>
+                                <td class="text-center">
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.EstudianteId }, new { @class = "btn btn-sm btn-primary" })<br />
+                                    @Html.ActionLink("Detalles", "Details", new { id = item.EstudianteId }, new { @class = "btn btn-sm btn-info mt-1" })<br />
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.EstudianteId }, new
+                                    {
+                                        @class = "btn btn-sm btn-danger mt-1",
+                                        onclick = "return confirm('¿Estás seguro de que deseas eliminar este registro?, Si eliminas El estudiante borraras los datos relacionados del mismo (Calificaciones, Curso presente)');"
+                                    })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}

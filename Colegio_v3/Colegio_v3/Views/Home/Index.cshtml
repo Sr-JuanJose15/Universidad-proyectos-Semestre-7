@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Panel Principal";
+}
+
+<h2 class="text-center my-4">🖊 Sistema Administrativo del Colegio 🏫 </h2>
+
+<div class="row">
+
+    <!-- Gestión Estudiantil -->
+    <div class="col-md-4">
+        <div class="card border-primary mb-4 shadow">
+            <div class="card-header bg-primary text-white text-center">
+                Gestión Estudiantil
+            </div>
+            <div class="card-body">
+                <p><a href="@Url.Action("Index", "Estudiante")" class="btn btn-outline-primary btn-block">Estudiantes</a></p>
+                <p><a href="@Url.Action("Create", "Estudiante")" class="btn btn-outline-success btn-block">Matricular Estudiante</a></p>
+                <p><a href="@Url.Action("Index", "Acudiente")" class="btn btn-outline-info btn-block">Acudientes</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gestión Académica -->
+    <div class="col-md-4">
+        <div class="card border-success mb-4 shadow">
+            <div class="card-header bg-success text-white text-center">
+                Gestión Académica
+            </div>
+            <div class="card-body">
+                <p><a href="@Url.Action("Index", "Curso")" class="btn btn-outline-success btn-block">Cursos</a></p>
+                <p><a href="@Url.Action("Index", "Asignatura")" class="btn btn-outline-success btn-block">Asignaturas</a></p>
+                <p><a href="@Url.Action("Index", "CursoAsignatura")" class="btn btn-outline-success btn-block">Asignar Materias a Curso</a></p>
+                <p><a href="@Url.Action("Index", "Calificacion")" class="btn btn-outline-success btn-block">Calificaciones</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gestión del Personal -->
+    <div class="col-md-4">
+        <div class="card border-danger mb-4 shadow">
+            <div class="card-header bg-danger text-white text-center">
+                Gestión del Personal
+            </div>
+            <div class="card-body">
+                <p><a href="@Url.Action("Index", "Personal")" class="btn btn-outline-danger btn-block">Personal</a></p>
+                <p><a href="@Url.Action("Index", "AsignaturaPersonal")" class="btn btn-outline-danger btn-block">Asignar Materias al Docente</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>

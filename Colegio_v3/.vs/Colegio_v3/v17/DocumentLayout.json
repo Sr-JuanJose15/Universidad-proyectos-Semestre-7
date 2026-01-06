@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|c:\\users\\equipo\\desktop\\tareas universidad\\semestre 7\\lenguaje de progrmacino avanzado\\trabajos\\colegio_v3\\colegio_v3\\controllers\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|solutionrelative:colegio_v3\\controllers\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|c:\\users\\equipo\\desktop\\tareas universidad\\semestre 7\\lenguaje de progrmacino avanzado\\trabajos\\colegio_v3\\colegio_v3\\views\\estudiante\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|solutionrelative:colegio_v3\\views\\estudiante\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|c:\\users\\equipo\\desktop\\tareas universidad\\semestre 7\\lenguaje de progrmacino avanzado\\trabajos\\colegio_v3\\colegio_v3\\controllers\\cursoasignaturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|solutionrelative:colegio_v3\\controllers\\cursoasignaturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|c:\\users\\equipo\\desktop\\tareas universidad\\semestre 7\\lenguaje de progrmacino avanzado\\trabajos\\colegio_v3\\colegio_v3\\models\\acudiente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F9E9B6-5C5D-497A-B3FB-4D5FA1FA6BA4}|Colegio_v3\\Colegio_v3.csproj|solutionrelative:colegio_v3\\models\\acudiente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstudianteController.cs",
+              "DocumentMoniker": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Controllers\\EstudianteController.cs",
+              "RelativeDocumentMoniker": "Colegio_v3\\Controllers\\EstudianteController.cs",
+              "ToolTip": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Controllers\\EstudianteController.cs",
+              "RelativeToolTip": "Colegio_v3\\Controllers\\EstudianteController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAlwGcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T00:01:23.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Views\\Estudiante\\Index.cshtml",
+              "RelativeDocumentMoniker": "Colegio_v3\\Views\\Estudiante\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Views\\Estudiante\\Index.cshtml",
+              "RelativeToolTip": "Colegio_v3\\Views\\Estudiante\\Index.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAowFYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T23:57:59.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CursoAsignaturaController.cs",
+              "DocumentMoniker": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Controllers\\CursoAsignaturaController.cs",
+              "RelativeDocumentMoniker": "Colegio_v3\\Controllers\\CursoAsignaturaController.cs",
+              "ToolTip": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Controllers\\CursoAsignaturaController.cs",
+              "RelativeToolTip": "Colegio_v3\\Controllers\\CursoAsignaturaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T19:37:16.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Acudiente.cs",
+              "DocumentMoniker": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Models\\Acudiente.cs",
+              "RelativeDocumentMoniker": "Colegio_v3\\Models\\Acudiente.cs",
+              "ToolTip": "C:\\Users\\Equipo\\Desktop\\Tareas universidad\\Semestre 7\\lenguaje de progrmacino avanzado\\Trabajos\\Colegio_v3\\Colegio_v3\\Models\\Acudiente.cs",
+              "RelativeToolTip": "Colegio_v3\\Models\\Acudiente.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T05:33:22.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
